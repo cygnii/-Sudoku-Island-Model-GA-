@@ -57,7 +57,7 @@ public class main {
             if(GA.isMaxGenerationsReached()) break;
 
             System.out.println("Tekošais paaudžu skaits: " + GA.getCurrentGenerationCount());
-            System.out.println("Visslābāko indivīdu piemērotībā: " + GA.getPopulation().getFittest().getFitness());
+            System.out.println("Vislābākā indivīdu piemērotībā: " + GA.getPopulation().getFittest().getFitness());
             System.out.println("Populācijas piemērotībā: " + GA.getPopulation().getPopulationFitness());
 
             GA.sudokuUniformCrossover();
@@ -99,7 +99,7 @@ public class main {
                 islandModel.evaluateIslands();
 
                 System.out.println("Tekošais paaudžu skaits: " + islandModel.getGenerationCount());
-                System.out.println("Visslābāko indivīdu piemērotībā: " + islandModel.getFittestThread().getGA().getPopulation().getFittest().getFitness());
+                System.out.println("vislābākā indivīdu piemērotībā: " + islandModel.getFittestThread().getGA().getPopulation().getFittest().getFitness());
                 System.out.println("Salu piemērotība: " + islandModel.getIslandFitness());
 
                 if (islandModel.isIslandTerminationConditionMet() || islandModel.isMaxGenerationsReached()) {
@@ -116,7 +116,7 @@ public class main {
         }
 
         System.out.println("Kopējais paaudžu skaits: " + islandModel.getGenerationCount());
-        System.out.println("Pēdējā visslābāko indivīdu piemērotībā: " + islandModel.getFittestThread().getGA().getPopulation().getFittest().getFitness());
+        System.out.println("Pēdējā vislābākā indivīdu piemērotībā: " + islandModel.getFittestThread().getGA().getPopulation().getFittest().getFitness());
         System.out.println("Pēdēja salu piemērotība: " + islandModel.getIslandFitness());
 
         grid = islandModel.getFittestThread().getGA().getPopulation().getFittest().getIndividual();
@@ -138,7 +138,7 @@ public class main {
             MGA.evalPopulation();
 
             System.out.println("Tekošais paaudžu skaits: " + MGA.getCurrentGenerationCount());
-            System.out.println("Visslābāko indivīdu piemērotībā: " + MGA.getPopulation().getFittestByIndex(0).getFitness());
+            System.out.println("Vislābākā indivīdu piemērotībā: " + MGA.getPopulation().getFittestByIndex(0).getFitness());
             System.out.println("Labāko parametru nobeiguma paaudžu skaits: " + MGA.getPopulation().getFittestByIndex(0).getGAGenerationCount());
             System.out.println("Labāko parametru nobeiguma indivīdā piemērotība: " + MGA.getPopulation().getFittestByIndex(0).getFitnessGA());
             System.out.println("Populācijas indivīdu skaits: " + MGA.getPopulation().getFittestByIndex(0).populationSize);
